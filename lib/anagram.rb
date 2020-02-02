@@ -1,11 +1,14 @@
+
 class Anagram
+
   attr_accessor :name
 
   def initialize(word)
-    @name = word
-  end
+    @name = word 
+  end   
 
-  def match(arr)
-    arr.select { |w| w.upcase.bytes.sum === @name.upcase.bytes.sum }
-  end
-end
+  def match(array)
+    array.select {|x| x.split("").sort == @name.split("").sort}
+  end   
+
+end 
