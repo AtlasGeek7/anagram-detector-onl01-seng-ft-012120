@@ -5,13 +5,7 @@ class Anagram
     @name = word
   end
 
-  def ascii_sum(str)
-    sum =  0
-    str.upcase.split("").each { |c| sum += c.ord }
-    return sum
-  end
-
   def match(arr)
-    arr.select { |w| ascii_sum(w) === ascii_sum(@name) if (w.size === @name.size) }
+    arr.select { |w| w.upcase.bytes.sum === @name.upcase.bytes.sum }
   end
 end
