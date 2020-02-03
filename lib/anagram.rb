@@ -1,14 +1,9 @@
-
 class Anagram
-
   attr_accessor :name
-
   def initialize(word)
-    @name = word 
-  end   
-
-  def match(array)
-    array.select {|x| x.split("").sort == @name.split("").sort}
-  end   
-
-end 
+    @name = word
+  end
+  def match(arr)
+    arr.select { |w| w.upcase.ord.sum === @name.upcase.ord.sum }
+  end
+end
