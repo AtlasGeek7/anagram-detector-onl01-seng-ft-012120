@@ -17,7 +17,7 @@ describe 'Anagram' do
   end
 
   it 'should detect multiple anagrams' do
-    detector = Anagram.new('allergy')
+    detector = Anagram.new('Allergy')
     allergy = detector.match %w(gallery ballerina regally clergy largely leading)
     expect(allergy).to eq(['gallery', 'regally', 'largely'])
   end
