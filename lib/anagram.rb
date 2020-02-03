@@ -15,3 +15,17 @@ class Anagram
     arr.select { |w| ascii_sum(w) === ascii_sum(@name) if (w.size === @name.size) }
   end
 end
+
+class Anagram
+
+  attr_accessor :name
+
+  def initialize(word)
+    @name = word 
+  end   
+
+  def match(array)
+    array.select {|x| x.split("").sort == @name.split("").sort}
+  end   
+
+end 
